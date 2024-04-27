@@ -4,13 +4,13 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
+use App\Models\Caracteristica;
 class Producto extends Model
 {
     use HasFactory;
 
-    public function caracteristica()
+    public function caracteristicas()
     {
-        return $this->hasMany(Caracteristicas::class, 'id_producto', 'id');
+        return $this->hasMany(Caracteristica::class, 'id_producto', 'id');
     }
 }

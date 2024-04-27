@@ -34,26 +34,26 @@ class CaracteristicasSeeder extends Seeder
 
                 switch ($nombre_caracteristica) {
                     case 'Peso':
-                        $descripcion = $faker->randomFloat(1, 1, 100) . 'kg';
+                        $descripcion_caracteristica = $faker->randomFloat(1, 1, 100) . 'kg';
                         break;
                     case 'Color':
-                        $descripcion = $faker->safeColorName;
+                        $descripcion_caracteristica = $faker->safeColorName;
                         break;
                     case 'Tamaño':
-                        $descripcion = $faker->randomElement(['Pequeño', 'Mediano', 'Grande']);
+                        $descripcion_caracteristica = $faker->randomElement(['Pequeño', 'Mediano', 'Grande']);
                         break;
                     case 'Material':
-                        $descripcion = $faker->randomElement(['Acero', 'Plástico', 'Madera']);
+                        $descripcion_caracteristica = $faker->randomElement(['Acero', 'Plástico', 'Madera']);
                         break;
                     case 'Dimensiones':
-                        $descripcion = $faker->randomFloat(2, 1, 10) . 'x' . $faker->randomFloat(2, 1, 10) . 'x' . $faker->randomFloat(2, 1, 10) . 'cm';
+                        $descripcion_caracteristica = $faker->randomFloat(2, 1, 10) . 'x' . $faker->randomFloat(2, 1, 10) . 'x' . $faker->randomFloat(2, 1, 10) . 'cm';
                         break;
                     default:
-                        $descripcion = $faker->sentence();
+                        $descripcion_caracteristica = $faker->sentence();
                         break;
                 }
 
-                $caracteristica->descripcion = $descripcion;
+                $caracteristica->descripcion_caracteristica = $descripcion_caracteristica;
 
                 $caracteristica->save();
             }

@@ -18,7 +18,7 @@ class CreateCaracteristicasTable extends Migration
             $table->unsignedBigInteger('id_producto');
             $table->foreign('id_producto')->references('id')->on('productos')->onDelete('cascade');
             $table->string('nombre_caracteristica');
-            $table->string('descripcion');
+            $table->string('descripcion_caracteristica');
             $table->timestamps();
         });
     }

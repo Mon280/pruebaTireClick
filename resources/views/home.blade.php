@@ -1,6 +1,25 @@
 @extends('layouts.admin')
 
 @section('content')
+<div class="container-fluid p-0 m-0 pb-4">
+    <div class="page-breadcrumb">
+        <div class="row align-items-center">
+            <div class="col-5">
+                <h4 class="page-title">Dashboard</h4>
+                <div class="d-flex align-items-center">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a>Dashboard</a></li>
+                        </ol>
+                        
+                    </nav>
+                </div>
+            </div>
+            <div class="col-7">
+            </div>
+        </div>
+    </div>
+</div>
     <div class="row">
         <div class="col-md-12">
             <div class="container justify-content-center align-items-center d-flex w-100"
