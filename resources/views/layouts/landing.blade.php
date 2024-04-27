@@ -196,23 +196,21 @@ $currentPath = request()->path();
     {{-- inicio footer --}}
     <footer class="section footer">
         <div class="container-fluid" style="background-color:white">
-            <div class="row pt-4 pb-4 justify-content-center d-flex p-0 m-0">
-                <img src="nuevos/generales/logo-azul.png" style="width:120px;height:auto">
-            </div>
+         
             <div class="row justify-content-center d-flex">
-                <div class="container"style="border-top:1px solid #2c2c54; max-width:80%"></div>
+                <div class="container"style="border-top:1px solid #b23d58; max-width:80%"></div>
             </div>
             <div class="row p-4">
                 <div class="col-md-2">
                 </div>
                 <div class="col-lg justify-content-center d-flex">
-                    <a href="index.php" class="sin-decoracion">
+                    <a  href="{{ route('inicio') }}" class="sin-decoracion">
                         <p class=" enlaces carnas2" style="text-align:center">Inicio</p>
                     </a>
                 </div>
                 <div class="col-lg justify-content-center d-flex">
-                    <a href="nosotros.php" class="sin-decoracion">
-                        <p class="enlaces carnas2" style="text-align:center">Sobre Nosotros</p>
+                    <a href="{{ route('productos-cliente') }}" class="sin-decoracion">
+                        <p class="enlaces carnas2" style="text-align:center">Productos</p>
                     </a>
                 </div>
 
