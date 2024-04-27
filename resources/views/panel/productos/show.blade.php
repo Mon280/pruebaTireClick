@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+
     <div class="row">
         <div class="col-md-12">
             <div class="container justify-content-center align-items-center d-flex w-100"
@@ -76,20 +77,16 @@
                                             </a>
                                         </div>
                                         <div class="col-md-4">
-                                            <form id="form-{{ $producto->id }}"
-                                                action="{{ route('productos.destroy', $producto->id) }}" method="post"
-                                                style="display: inline;">
+                                            <form id="form-{{ $producto->id }}" action="{{ route('productos.destroy', $producto->id) }}" method="post" style="display: inline;">
                                                 {{ csrf_field() }}
                                                 @method('delete')
-
-                                                <a href="#" onclick="eliminar({{ $producto->id }});"
-                                                    class="btn btn-danger red-rainbow m-1"style="border-radius: 5px">
-                                                    <i class="fa fa-trash fa-lg"
-                                                        style="color: white;width:20px; height:20px" aria-hidden="true"></i>
-                                                </a>
+                                        
+                                                <button type="submit" class="btn btn-danger red-rainbow m-1" style="border-radius: 5px" onclick="return eliminar(event, {{ $producto->id }});">
+                                                    <i class="fa fa-trash fa-lg" style="color: white;width:20px; height:20px" aria-hidden="true"></i>
+                                                </button>
                                             </form>
-
                                         </div>
+                                        
                                     </div>
                                 </td>
                             </tr>
@@ -146,33 +143,35 @@
             });
         });
     </script>
-    {{-- Destroy confirmation --}}
-    <script>
-        function eliminar(userId) {
-            Swal.fire({
-                title: '¡Atención!',
-                text: '¿Seguro que quieres eliminar el producto?',
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#d63030',
-                cancelButtonColor: '#b0b0b0',
-                confirmButtonText: 'Eliminar',
-                cancelButtonText: 'Cancelar'
-            }).then((result) => {
-                if (result.value) {
-                    Swal.fire({
-                        title: 'Eliminando...',
-                        text: 'Por favor, espera un momento',
-                        icon: 'info',
-                        allowOutsideClick: false,
-                        showConfirmButton: false,
-                        willOpen: () => {
-                            Swal.showLoading();
-                        }
-                    });
-                    document.getElementById('btnEliminar-' + userId).click();
-                }
-            });
-        }
-    </script>
+  <script>
+    function eliminar(event, productoId) {
+        event.preventDefault(); 
+
+        Swal.fire({
+            title: '¡Atención!',
+            text: '¿Seguro que quieres eliminar el producto?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d63030',
+            cancelButtonColor: '#b0b0b0',
+            confirmButtonText: 'Eliminar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.value) {
+                Swal.fire({
+                    title: 'Eliminando...',
+                    text: 'Por favor, espera un momento',
+                    icon: 'info',
+                    allowOutsideClick: false,
+                    showConfirmButton: false,
+                    willOpen: () => {
+                        Swal.showLoading();
+                    }
+                });
+
+                document.getElementById('form-' + productoId).submit();
+            }
+        });
+    }
+</script>
 @endsection
