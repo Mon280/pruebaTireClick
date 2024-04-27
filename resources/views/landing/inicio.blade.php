@@ -44,15 +44,24 @@
             border-radius: 30px
         }
 
-        .mi-btn{
-            background-color: #cea5b5;
+        .mi-btn {
+            background-color: #b23d58;
             color: white;
-            border: 1px solid white
+            border: 1px solid white;
+            border-radius: 20px;
         }
-        .mi-btn:hover{
+
+        .mi-btn:hover {
             background-color: #3b8fb6;
             border: 1px solid white
+        }
 
+        .card-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
 
         }
     </style>
@@ -85,11 +94,13 @@
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <h1 class="carnas1 text-white"
-                                        style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Donuts Dyzer<br>Haz de
+                                        style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Donuts
+                                        Dyzer<br>Haz de
                                         cada día una fiesta.</h1>
                                 </div>
                                 <div class="row justify-content-center pt-4">
-                                    <a href="/productos" class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
+                                    <a href="/productos" class="carnas2 btn btn-primary mi-btn">Conoce nuestros
+                                        productos</a>
                                 </div>
                             </div>
 
@@ -98,17 +109,33 @@
                     <swiper-slide>
                         <div class="img-swiper justify-content-center align-items-center d-flex"
                             style="background-image: url('{{ asset('assets/index/donas13.jpg') }}')">
-                            <h1 class="carnas1 text-white"
-                                style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Donuts Dyzer<br> Descubre
-                                el arte de lo dulce con nosotros.</h1>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <h1 class="carnas1 text-white"
+                                        style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Donuts Dyzer<br>
+                                        Descubre
+                                        el arte de lo dulce con nosotros.</h1>
+                                </div>
+                                <div class="row justify-content-center pt-4">
+                                    <a class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
+                                </div>
+                            </div>
                         </div>
                     </swiper-slide>
                     <swiper-slide>
                         <div class="img-swiper justify-content-center align-items-center d-flex"
                             style="background-image: url('{{ asset('assets/index/donas9.jpg') }}')">
-                            <h1 class="carnas1 text-white"
-                                style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Donuts Dyzer<br> Donas
-                                para alegrar tu día.</h1>
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <h1 class="carnas1 text-white"
+                                        style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Donuts Dyzer<br>
+                                        Donas
+                                        para alegrar tu día.</h1>
+                                </div>
+                                <div class="row justify-content-center pt-4">
+                                    <a class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
+                                </div>
+                            </div>
 
                         </div>
                     </swiper-slide>
@@ -122,8 +149,9 @@
                     <img src="{{ asset('assets/index/donas14.jpg') }}" class="w-100 tam-img" alt="">
                 </div>
                 <div class="col-md-7 p-5">
-                    <h3 class="carnas1 pt-3" style="color:#3b8fb6">Sobre nosotros</h3>
-                    <p class="p-0 m-0 carnas2 pt-3" style="font-size: 18px">Desde 2015, en Donuts Dyzer nos dedicamos a crear experiencias dulces y
+                    <h3 class="carnas1 pt-3" style="color:#b23d58">Sobre nosotros</h3>
+                    <p class="p-0 m-0 carnas2 pt-3" style="font-size: 18px">Desde 2015, en Donuts Dyzer nos dedicamos a
+                        crear experiencias dulces y
                         memorables
                         para nuestros clientes. Con una pasión arraigada por la calidad y la creatividad, hemos estado
                         sirviendo las donas más deliciosas y frescas durante años. Nuestro compromiso con la excelencia se
@@ -138,8 +166,24 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="carnas1 pt-3 text-center" style="color:#3b8fb6">Conoce nuestros productos</h3>
-
+                    <h3 class="carnas1 pt-3 text-center" style="color:#b23d58">Conoce nuestros productos</h3>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-12">
+                    <div class="row">
+                        @foreach ($productos->random(3) as $producto)
+                            <div class="col-md-4 col-12">
+                                <div class="card" style="border-radius: 30px">
+                                    <img src="{{ asset('assets/index/donas15.jpg') }}" class="card-img" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{ $producto->nombre }}</h5>
+                                        <p class="card-text">${{ $producto->precio }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
