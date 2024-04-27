@@ -26,7 +26,7 @@ use Faker\Factory as Faker
             $nombre = $faker->sentence(3);
             $descripcion = $faker->paragraph(3);
             $slug = Str::slug($nombre, '-'); 
-            $precio = $faker->randomFloat(2, 10, 1000);
+            $precio = $faker->randomFloat(2, 10, 50);
             $stock = $faker->numberBetween(0, 100);
             $marca = $faker->company;
 

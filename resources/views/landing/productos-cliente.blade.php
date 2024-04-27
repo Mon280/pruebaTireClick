@@ -8,7 +8,7 @@
         }
 
         .img-cover {
-            background-image: url('{{ asset('assets/index/dona17.jpg') }}');
+            background-image: url('{{ asset('assets/index/donas7.jpg') }}');
             background-size: cover;
             background-position: center;
             width: 100%;
@@ -69,7 +69,7 @@
                                             {{ $caracteristica->descripcion_caracteristica }}</li>
                                     @endforeach
                                 </ul>
-                                <p class="card-text pt-4 carnas2 p-0 m-0">Precio: ${{ $producto->precio }}</p>
+                                <p class="card-text pt-4 carnas2 p-0 m-0">Precio: ${{ $producto->precio }} mxn</p>
                                 <p class="card-text carnas2 p-0 m-0">Stock: {{ $producto->stock }}</p>
                             </div>
                         </div>

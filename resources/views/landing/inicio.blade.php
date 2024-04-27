@@ -57,8 +57,8 @@
         }
 
         .card-img {
-            width: 100%;
-            height: 250px;
+            width: 250PX;
+            height: auto;
             object-fit: cover;
             border-top-left-radius: 30px;
             border-top-right-radius: 30px;
@@ -97,7 +97,7 @@
                                         Artesanales, Sabores Auténticos.</h1>
                                 </div>
                                 <div class="row justify-content-center pt-4">
-                                    <a class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
+                                    <a href="/productos-cliente" class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
                                 </div>
                             </div>
 
@@ -114,7 +114,7 @@
                                         cada día una fiesta.</h1>
                                 </div>
                                 <div class="row justify-content-center pt-4">
-                                    <a href="/productos" class="carnas2 btn btn-primary mi-btn">Conoce nuestros
+                                    <a href="/productos-cliente" class="carnas2 btn btn-primary mi-btn">Conoce nuestros
                                         productos</a>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@
                                         el arte de lo dulce con nosotros.</h1>
                                 </div>
                                 <div class="row justify-content-center pt-4">
-                                    <a class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
+                                    <a href="/productos-cliente" class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
                                 </div>
                             </div>
                         </div>
@@ -148,7 +148,7 @@
                                         para alegrar tu día.</h1>
                                 </div>
                                 <div class="row justify-content-center pt-4">
-                                    <a class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
+                                    <a href="/productos-cliente" class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
                                 </div>
                             </div>
 
@@ -191,17 +191,26 @@
                             <div class="col-md-4 col-12">
                                 <div class="card"
                                     style="border-radius: 30px;   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
-                                    <img src="{{ asset('assets/index/donas15.jpg') }}" class="card-img" alt="...">
+                                    <div class="row">
+                                        <div class="col-md-12 justify-content-center d-flex">
+                                            <?php
+                                            $randomImages = ['assets/index/dona-individual/dona1.png', 'assets/index/dona-individual/dona2.png', 'assets/index/dona-individual/dona4.png', 'assets/index/dona-individual/dona5.png', 'assets/index/dona-individual/dona6.png', 'assets/index/dona-individual/dona7.png', 'assets/index/dona-individual/dona8.png'];
+                                            $randomImage = $randomImages[array_rand($randomImages)];
+                                            ?>
+                                            <img src="{{ asset($randomImage) }}" class="card-img" alt="...">
+                                        </div>
+                                    </div>
+        
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $producto->nombre }}</h5>
-                                        <p class="card-text">Precio: ${{ $producto->precio }}</p>
+                                        <p class="card-text">Precio: ${{ $producto->precio }} mxn</p>
                                     </div>
                                 </div>
                             </div>
                         @endforeach
                     </div>
                     <div class="row justify-content-center pt-4">
-                        <a href="/productos" class="carnas2 btn btn-primary mi-btn pl-4 pr-4">Ver catálogo</a>
+                        <a href="/productos-cliente" class="carnas2 btn btn-primary mi-btn pl-4 pr-4">Ver catálogo</a>
                     </div>
                 </div>
             </div>

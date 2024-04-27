@@ -1,8 +1,5 @@
 <?php
-
-
 namespace Database\Seeders;
-
 
 use Illuminate\Database\Seeder;
 use App\Models\Producto;
@@ -19,43 +16,48 @@ class CaracteristicasSeeder extends Seeder
     public function run()
     {
         $productos = Producto::all();
-        
         $faker = Faker::create();
 
         foreach ($productos as $producto) {
-            $cantidad_caracteristicas = rand(3, 5);
+            $caracteristicas_existente = $producto->caracteristicas->pluck('nombre_caracteristica')->toArray();
 
-            for ($i = 0; $i < $cantidad_caracteristicas; $i++) {
-                $caracteristica = new Caracteristica();
-                $caracteristica->id_producto = $producto->id;
+            $posibles_caracteristicas = ['Diámetro', 'Peso', 'Sabor', 'Cobertura', 'Relleno'];
 
-                $nombre_caracteristica = $faker->randomElement(['Peso', 'Color', 'Tamaño', 'Material', 'Dimensiones']);
-                $caracteristica->nombre_caracteristica = $nombre_caracteristica;
+            shuffle($posibles_caracteristicas);
 
-                switch ($nombre_caracteristica) {
-                    case 'Peso':
-                        $descripcion_caracteristica = $faker->randomFloat(1, 1, 100) . 'kg';
-                        break;
-                    case 'Color':
-                        $descripcion_caracteristica = $faker->safeColorName;
-                        break;
-                    case 'Tamaño':
-                        $descripcion_caracteristica = $faker->randomElement(['Pequeño', 'Mediano', 'Grande']);
-                        break;
-                    case 'Material':
-                        $descripcion_caracteristica = $faker->randomElement(['Acero', 'Plástico', 'Madera']);
-                        break;
-                    case 'Dimensiones':
-                        $descripcion_caracteristica = $faker->randomFloat(2, 1, 10) . 'x' . $faker->randomFloat(2, 1, 10) . 'x' . $faker->randomFloat(2, 1, 10) . 'cm';
-                        break;
-                    default:
-                        $descripcion_caracteristica = $faker->sentence();
-                        break;
+            foreach ($posibles_caracteristicas as $nombre_caracteristica) {
+                if (!in_array($nombre_caracteristica, $caracteristicas_existente)) {
+                    $caracteristica = new Caracteristica();
+                    $caracteristica->id_producto = $producto->id;
+                    $caracteristica->nombre_caracteristica = $nombre_caracteristica;
+
+                    switch ($nombre_caracteristica) {
+                        case 'Diámetro':
+                            $descripcion_caracteristica = $faker->randomFloat(2, 5, 15) . ' cm';
+                            break;
+                        case 'Peso':
+                            $descripcion_caracteristica = $faker->randomFloat(1, 20, 100) . ' gr';
+                            break;
+                        case 'Sabor':
+                            $descripcion_caracteristica = $faker->randomElement(['Chocolate', 'Fresa', 'Vainilla', 'Caramelo', 'Limón']);
+                            break;
+                        case 'Cobertura':
+                            $descripcion_caracteristica = $faker->randomElement(['Chocolate', 'Frosting de Vainilla', 'Glaseado de Fresa', 'Caramelo']);
+                            break;
+                        case 'Relleno':
+                            $descripcion_caracteristica = $faker->randomElement(['Crema de Chocolate', 'Crema de Vainilla', 'Mermelada de Fresa', 'Cajeta']);
+                            break;
+                        default:
+                            $descripcion_caracteristica = $faker->sentence();
+                            break;
+                    }
+
+                    $caracteristica->descripcion_caracteristica = $descripcion_caracteristica;
+
+                    $caracteristica->save();
+
+                    $caracteristicas_existente[] = $nombre_caracteristica;
                 }
-
-                $caracteristica->descripcion_caracteristica = $descripcion_caracteristica;
-
-                $caracteristica->save();
             }
         }
     }
