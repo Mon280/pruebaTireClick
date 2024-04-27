@@ -181,7 +181,7 @@ $currentPath = request()->path();
                     <li class="nav-item {{ $currentPage == 'inicio' ? 'active' : '' }} ">
                         <a class="nav-link" href="{{ route('inicio') }}">Inicio</a>
                     </li>
-                    <li class="nav-item {{ $currentPage == 'productos' ? 'active' : '' }} ">
+                    <li class="nav-item {{ $currentPage == 'productos-cliente' ? 'active' : '' }} ">
                         <a class="nav-link" href="{{ route('productos-cliente') }}">Productos</a>
                     </li>
                 </ul>

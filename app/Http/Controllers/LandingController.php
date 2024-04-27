@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Producto;
+use App\Models\Caracteristica;
+
 
 class LandingController extends Controller
 {
@@ -17,9 +19,11 @@ class LandingController extends Controller
     public function productosCliente()
     {
         $productos = Producto::all();
+        $caracteristicas = Caracteristica::all();
+
         $currentPage = 'productos-cliente';
 
-        return view('landing.inicio')->with('productos', $productos)->with('currentPage', $currentPage);
+        return view('landing.productos-cliente')->with('productos', $productos)->with('currentPage', $currentPage)->with('caracteristicas', $caracteristicas);
     }
     public function carrito()
     {
