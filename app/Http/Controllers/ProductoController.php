@@ -14,7 +14,9 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        $productos = Producto::all();
+
+        return view('panel.productos.show')->with('productos', $productos);
     }
 
     /**
@@ -78,8 +80,15 @@ class ProductoController extends Controller
      * @param  \App\Models\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Producto $producto)
+    public function destroy($id)
     {
-        //
+        try {
+            $producto = Producto::findOrFail($id);
+            $producto->delete();
+
+            return redirect()->route('productos.index')->with('success', 'Producto eliminado exitosamente');
+        } catch (\Exception $e) {
+            return redirect()->back()->withErrors(['Error al eliminar el producto. Por favor, inténtelo de nuevo.']);
+        }
     }
 }

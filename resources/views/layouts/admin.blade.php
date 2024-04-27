@@ -16,6 +16,11 @@
     <link href="{{ asset('plantillalibs/chartist/dist/chartist.min.css') }}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{ asset('plantilla/dist/css/style.min.css') }}" rel="stylesheet">
+<!-- Desde CDN -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- O desde tu proyecto -->
+<link href="{{ asset('ruta/a/bootstrap.min.css') }}" rel="stylesheet">
 
 </head>
 
@@ -101,11 +106,11 @@
                             </div>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link  waves-effect waves-dark sidebar-link"
-                                style="background-color:#4b49ac;" href="index.html" aria-expanded="false"><i
+                                style="background-color:#4b49ac;"  href="/home" aria-expanded="false"><i
                                     class="mdi mdi-view-dashboard" style="color:white"></i><span
                                     class="hide-menu text-white">Home</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="table-basic.html" aria-expanded="false"><i class="mdi mdi-border-all"
+                            href="/productos" aria-expanded="false"><i class="mdi mdi-border-all"
                                     style="color:white"></i><span class="hide-menu text-white">Productos</span></a>
                         </li>
                     </ul>
@@ -157,6 +162,13 @@
         <script src="{{ asset('plantilla/assets/libs/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js') }}">
         </script>
         <script src="{{ asset('plantilla/dist/js/pages/dashboards/dashboard1.js') }}"></script>
+        <!-- Desde CDN -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- O desde tu proyecto -->
+<script src="{{ asset('ruta/a/bootstrap.min.js') }}"></script>
+
+        @yield('scripts')
 
 </body>
 
