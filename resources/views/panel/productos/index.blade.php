@@ -30,7 +30,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="container justify-content-center align-items-center d-flex w-100"
-                style="background-image: url('{{ asset('assets/morado.jpeg') }}'); height:200px;background-repeat:no-repeat;background-size:cover;background-position: center;border-radius:30px">
+                style="background-image: '{{ asset('assets/morado.jpeg') }}'); height:200px;background-repeat:no-repeat;background-size:cover;background-position: center;border-radius:30px">
                 <div class="row">
                     <h1 class="text-white text-center" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);">Productos</h1>
                 </div>

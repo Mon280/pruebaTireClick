@@ -17,10 +17,10 @@ class ProductoController extends Controller
     public function index()
     {
         $productos = Producto::orderBy('created_at', 'desc')->get();
-    
+
         return view('panel.productos.index')->with('productos', $productos);
     }
-    
+
     /**
      * Show the form for creating a new resource.
      *
@@ -43,16 +43,16 @@ class ProductoController extends Controller
         $request->validate([
             'nombre' => 'required|string|max:255',
             'descripcion' => 'required|string|max:255',
-    
+
             'descripcion_caracteristica' => 'required|array',
             'descripcion_caracteristica.*' => 'nullable|string',
             'precio' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
             'marca' => 'required|string|max:255',
-            'nombre_caracteristica' => 'array', 
+            'nombre_caracteristica' => 'array',
             'nombre_caracteristica.*' => 'nullable|string|max:255',
         ]);
-    
+
         // Crear un nuevo producto
         $producto = new Producto();
         $producto->nombre = $request->nombre;
@@ -62,13 +62,11 @@ class ProductoController extends Controller
         $producto->stock = $request->stock;
         $producto->marca = $request->marca;
         $producto->save();
-    
+
         // Verificar si se han enviado características
         if ($request->has('nombre_caracteristica')) {
-            // Recorrer el array de características
             foreach ($request->nombre_caracteristica as $key => $nombre_caracteristica) {
                 if (!empty($nombre_caracteristica)) {
-                    // Crear una nueva característica asociada al producto
                     $caracteristica = new Caracteristica();
                     $caracteristica->id_producto = $producto->id;
                     $caracteristica->nombre_caracteristica = $nombre_caracteristica;
@@ -77,21 +75,23 @@ class ProductoController extends Controller
                 }
             }
         }
-    
+
         // Redireccionar a alguna vista o ruta después de guardar los datos
         return redirect()->route('productos.index')->with('success', 'Producto creado correctamente.');
     }
-    
-    
+
+
     /**
      * Display the specified resource.
      *
      * @param  \App\Models\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function show(Producto $producto)
+    public function show($slug)
     {
-        //
+        $producto = Producto::where('slug', $slug)->firstOrFail();
+
+        return view('productos.show', compact('producto'));
     }
 
     /**
@@ -120,6 +120,7 @@ class ProductoController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // dd($request);
         $request->validate([
             'nombre' => 'required|string|max:255',
             'descripcion' => 'required|string|max:255',
@@ -128,13 +129,13 @@ class ProductoController extends Controller
             'precio' => 'required|numeric|min:0',
             'stock' => 'required|integer|min:0',
             'marca' => 'required|string|max:255',
-            'nombre_caracteristica' => 'array', 
+            'nombre_caracteristica' => 'array',
             'nombre_caracteristica.*' => 'nullable|string|max:255',
         ]);
-    
+
         // Buscar el producto 
         $producto = Producto::findOrFail($id);
-    
+
         $producto->nombre = $request->nombre;
         $producto->descripcion = $request->descripcion;
         $producto->slug = Str::slug($request->nombre, '-');
@@ -142,12 +143,12 @@ class ProductoController extends Controller
         $producto->stock = $request->stock;
         $producto->marca = $request->marca;
         $producto->save();
-    
+
         // Verificar si se han enviado nuevas características
         if ($request->has('nombre_caracteristica')) {
             // Eliminar las características anteriores asociadas a este producto
             $producto->caracteristicas()->delete();
-    
+
             foreach ($request->nombre_caracteristica as $key => $nombre_caracteristica) {
                 if (!empty($nombre_caracteristica)) {
                     $caracteristica = new Caracteristica();
@@ -158,8 +159,7 @@ class ProductoController extends Controller
                 }
             }
         }
-    
-        // Redireccionar a alguna vista o ruta después de actualizar los datos
+
         return redirect()->route('productos.index')->with('success', 'Producto actualizado correctamente.');
     }
 

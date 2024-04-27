@@ -18,7 +18,7 @@
     <link href="{{ asset('ruta/a/bootstrap.min.css') }}" rel="stylesheet">
 </head>
 
-<body style="background: linear-gradient(135deg, #0c0832, #4b49ac, #a042ba);">
+<body style="background-image:url('{{ asset('assets/fondo.jpeg') }}');background-size:cover;background-position:center">
     <main class="main-content h-100 w-100 justify-content-center align-items-center d-flex  mt-0">
         <div class="container ">
             <div class="row">
@@ -66,7 +66,7 @@
                                 </span>
                                 <div class="row mb-0 pt-4 pb-4">
                                     <div class="col-md-12 justify-content-center d-flex">
-                                        <button type="submit" class="btn btn-primary">
+                                        <button type="submit" class="btn btn-primary" style="background-color: #4040b1;border:none">
                                             {{ __('Iniciar Sesión') }}
                                         </button>
                                     </div>
