@@ -85,7 +85,7 @@
             <div class="col-md-12 p-0 m-0">
 
                 <swiper-container class="mySwiper w-100" loop="true" navigation="true" space-between="20" autoplay="true"
-                    speed="5000">
+                    speed="5000" style="position: relative;z-index:1">
                     <swiper-slide>
                         <div class="img-swiper justify-content-center align-items-center d-flex"
                             style="background-image: url('{{ asset('assets/index/donas5.jpg') }}')">

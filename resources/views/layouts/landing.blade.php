@@ -166,9 +166,9 @@ $currentPath = request()->path();
 
 <body>
     {{-- navbar --}}
-    <header class="section page-head ">
+    <header class="section page-head " style="position: relative;z-index:1000">
         <nav class="navbar navbar-expand-lg navbar-light justify-content-end d-flex"
-            style="background-color:white; box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.8);">
+            style="background-color:white; box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);">
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
