@@ -4,12 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="tus_palabras_clave_aquí">
     <meta name="description" content="tu_descripción_aquí">
     <meta name="robots" content="noindex,nofollow">
-    <title>Xtreme Admin Lite Template by WrapPixel</title>
+    <title>Mi prueba :D</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/xtreme-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('plantilla/images/favicon.png') }}">
@@ -21,176 +20,100 @@
 </head>
 
 <body>
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
+
     <div class="preloader">
         <div class="lds-ripple">
             <div class="lds-pos"></div>
             <div class="lds-pos"></div>
         </div>
     </div>
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
-        <header class="topbar" data-navbarbg="skin5">
+        <header class="topbar" data-navbarbg="skin5"
+            style=" background:#4b49ac;  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
-                <div class="navbar-header" data-logobg="skin5">
-                    <!-- ============================================================== -->
-                    <!-- Logo -->
-                    <!-- ============================================================== -->
-                    <a class="navbar-brand" href="index.html">
-                        <!-- Logo icon -->
-                        <b class="logo-icon">
-                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-                            <!-- Dark Logo icon -->
-                            <img src="{{ asset('plantilla/assets/images/logo-icon.png') }}" alt="homepage"
-                                class="dark-logo" />
-                            <!-- Light Logo icon -->
-                            <img src="{{ asset('plantilla/assets/images/logo-light-icon.png') }}" alt="homepage"
-                                class="light-logo" />
-                        </b>
-                        <!--End Logo icon -->
-                        <!-- Logo text -->
-                        <span class="logo-text">
-                            <!-- dark Logo text -->
-                            <img src="{{ asset('plantilla/assets/images/logo-text.png') }}" alt="homepage"
-                                class="dark-logo" />
-                            <!-- Light Logo text -->
-                            <img src="{{ asset('plantilla/assets/images/logo-light-text.png') }}" class="light-logo"
-                                alt="homepage" />
-                        </span>
-                    </a>
-                    <!-- ============================================================== -->
-                    <!-- End Logo -->
-                    <!-- ============================================================== -->
-                    <!-- This is for the sidebar toggle which is visible on mobile only -->
+                <div class="navbar-header" data-logobg="skin5" style=" background-color:transparent">
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
                             class="ti-menu ti-close"></i></a>
                 </div>
-                <!-- ============================================================== -->
-                <!-- End Logo -->
-                <!-- ============================================================== -->
-                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
-                    <!-- ============================================================== -->
-                    <!-- toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav float-start me-auto">
-                        <!-- ============================================================== -->
-                        <!-- Search -->
-                        <!-- ============================================================== -->
-                        <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark"
-                                href="javascript:void(0)"><i class="ti-search"></i></a>
-                            <form class="app-search position-absolute">
-                                <input type="text" class="form-control" placeholder="Search &amp; enter"> <a
-                                    class="srh-btn"><i class="ti-close"></i></a>
-                            </form>
-                        </li>
-                    </ul>
-                    <!-- ============================================================== -->
-                    <!-- Right side toggle and nav items -->
-                    <!-- ============================================================== -->
-                    <ul class="navbar-nav float-end">
-    
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5"
+                    style=" background-color:transparent">
+                    <ul class="navbar-nav justify-content-end d-flex w-100 float-end">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic"
                                 href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">
-                                <img src="{{ asset('plantilla/assets/images/users/1.jpg') }}" alt="user"
-                                    class="rounded-circle" width="31">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                                    viewBox="0 0 24 24" width="30px" height="30px">
+                                    <path fill="white"
+                                        d="M16.585,9.616,15.21,6h2.422A5.885,5.885,0,0,1,22.36,8.4l.787,1.075A4.431,4.431,0,0,1,23.867,11H16.952A6.5,6.5,0,0,0,16.585,9.616ZM12,4a1,1,0,0,0,1-1V1a1,1,0,0,0-2,0V3A1,1,0,0,0,12,4Zm2.722,6.343L13.071,6H10.938L9.26,10.452A4.709,4.709,0,0,0,9.1,11h5.821A4.623,4.623,0,0,0,14.722,10.343ZM16.553,3.9A1,1,0,0,0,17.9,3.447l1-2a1,1,0,1,0-1.79-.894l-1,2A1,1,0,0,0,16.553,3.9ZM11.988,18.887l2.786-5.253A4.591,4.591,0,0,0,14.941,13H9a4.585,4.585,0,0,0,.2.757ZM7.4,9.729,8.8,6H6.383A5.892,5.892,0,0,0,1.721,8.309L.9,9.383A4.366,4.366,0,0,0,.141,11h6.9A6.6,6.6,0,0,1,7.4,9.729ZM16.969,13a6.573,6.573,0,0,1-.344,1.4c-.015.04-3.756,7.074-3.759,7.075a.973.973,0,0,1-1.726.008s-3.774-6.912-3.79-6.955A6.586,6.586,0,0,1,6.994,13H.121a4.3,4.3,0,0,0,1.328,2.32l7.99,7.707a3.82,3.82,0,0,0,2.55.969,3.9,3.9,0,0,0,2.6-1l7.936-7.633A4.373,4.373,0,0,0,23.89,13ZM6.105,3.447A1,1,0,0,0,7.9,2.553l-1-2a1,1,0,1,0-1.79.894Z" />
+                                </svg>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end user-dd animated"
                                 aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i>
-                                    My Profile</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i>
-                                    My Balance</a>
-                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i>
-                                    Inbox</a>
+                                <li>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                        onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <i class="fa fa-power-off m-r-5 m-l-5"></i> Cerrar Sesión
+                                    </a>
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+                                </li>
                             </ul>
                         </li>
-
                     </ul>
                 </div>
             </nav>
         </header>
 
-        <aside class="left-sidebar" data-sidebarbg="skin6">
-            <!-- Sidebar scroll-->
+        <aside class="left-sidebar" data-sidebarbg="skin6" style="background-color:#30333a">
             <div class="scroll-sidebar">
-                <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <!-- User Profile-->
+                    <ul id="sidebarnav"style="background-color:#30333a">
                         <li>
-                            <!-- User Profile-->
                             <div class="user-profile d-flex no-block dropdown m-t-20">
-                                <div class="user-pic"><img src="{{ asset('plantilla/assets/images/users/1.jpg') }}"
-                                        alt="users" class="rounded-circle" width="40" /></div>
+                                <div class="user-pic">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                                        viewBox="0 0 24 24" width="30px" height="30px">
+                                        <path fill="white"
+                                            d="M16.585,9.616,15.21,6h2.422A5.885,5.885,0,0,1,22.36,8.4l.787,1.075A4.431,4.431,0,0,1,23.867,11H16.952A6.5,6.5,0,0,0,16.585,9.616ZM12,4a1,1,0,0,0,1-1V1a1,1,0,0,0-2,0V3A1,1,0,0,0,12,4Zm2.722,6.343L13.071,6H10.938L9.26,10.452A4.709,4.709,0,0,0,9.1,11h5.821A4.623,4.623,0,0,0,14.722,10.343ZM16.553,3.9A1,1,0,0,0,17.9,3.447l1-2a1,1,0,1,0-1.79-.894l-1,2A1,1,0,0,0,16.553,3.9ZM11.988,18.887l2.786-5.253A4.591,4.591,0,0,0,14.941,13H9a4.585,4.585,0,0,0,.2.757ZM7.4,9.729,8.8,6H6.383A5.892,5.892,0,0,0,1.721,8.309L.9,9.383A4.366,4.366,0,0,0,.141,11h6.9A6.6,6.6,0,0,1,7.4,9.729ZM16.969,13a6.573,6.573,0,0,1-.344,1.4c-.015.04-3.756,7.074-3.759,7.075a.973.973,0,0,1-1.726.008s-3.774-6.912-3.79-6.955A6.586,6.586,0,0,1,6.994,13H.121a4.3,4.3,0,0,0,1.328,2.32l7.99,7.707a3.82,3.82,0,0,0,2.55.969,3.9,3.9,0,0,0,2.6-1l7.936-7.633A4.373,4.373,0,0,0,23.89,13ZM6.105,3.447A1,1,0,0,0,7.9,2.553l-1-2a1,1,0,1,0-1.79.894Z" />
+                                    </svg>
+                                </div>
                                 <div class="user-content hide-menu m-l-10">
                                     <a href="#" class="" id="Userdd" role="button"
                                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <h5 class="m-b-0 user-name font-medium">Steave Jobs <i
+                                        <h5 class="m-b-0 user-name font-medium text-white"> {{ Auth::user()->name }} <i
                                                 class="fa fa-angle-down"></i></h5>
-                                        <span class="op-5 user-email">varun@gmail.com</span>
+                                        <span class="op-5 user-email text-white"> {{ Auth::user()->email }}</span>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-end" aria-labelledby="Userdd">
-                                        <a class="dropdown-item" href="javascript:void(0)"><i
-                                                class="ti-user m-r-5 m-l-5"></i> My Profile</a>
-                                        <a class="dropdown-item" href="javascript:void(0)"><i
-                                                class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
-                                        <a class="dropdown-item" href="javascript:void(0)"><i
-                                                class="ti-email m-r-5 m-l-5"></i> Inbox</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="javascript:void(0)"><i
-                                                class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
-                                        <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="javascript:void(0)"><i
-                                                class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            <i class="fa fa-power-off m-r-5 m-l-5"></i> Cerrar Sesión
+                                        </a>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                        </form>
                                     </div>
                                 </div>
                             </div>
-                            <!-- End User Profile-->
                         </li>
-                        <li class="p-15 m-t-10"><a href="javascript:void(0)"
-                                class="btn d-block w-100 create-btn text-white no-block d-flex align-items-center"><i
-                                    class="fa fa-plus-square"></i> <span class="hide-menu m-l-5">Create New</span>
-                            </a>
+                        <li class="sidebar-item"> <a class="sidebar-link  waves-effect waves-dark sidebar-link"
+                                style="background-color:#4b49ac;" href="index.html" aria-expanded="false"><i
+                                    class="mdi mdi-view-dashboard" style="color:white"></i><span
+                                    class="hide-menu text-white">Home</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                                href="table-basic.html" aria-expanded="false"><i class="mdi mdi-border-all"
+                                    style="color:white"></i><span class="hide-menu text-white">Productos</span></a>
                         </li>
-                        <!-- User Profile-->
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="index.html" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
-                                    class="hide-menu">Dashboard</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="pages-profile.html" aria-expanded="false"><i
-                                    class="mdi mdi-account-network"></i><span class="hide-menu">Profile</span></a>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="table-basic.html" aria-expanded="false"><i class="mdi mdi-border-all"></i><span
-                                    class="hide-menu">Table</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="icon-material.html" aria-expanded="false"><i class="mdi mdi-face"></i><span
-                                    class="hide-menu">Icon</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="starter-kit.html" aria-expanded="false"><i class="mdi mdi-file"></i><span
-                                    class="hide-menu">Blank</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="error-404.html" aria-expanded="false"><i
-                                    class="mdi mdi-alert-outline"></i><span class="hide-menu">404</span></a></li>
-    
                     </ul>
-
                 </nav>
             </div>
         </aside>
 
         <div class="page-wrapper">
-
             <div class="page-breadcrumb">
                 <div class="row align-items-center">
                     <div class="col-5">
@@ -198,14 +121,12 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                    <li class="breadcrumb-item"><a href="/home">Home</a></li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                     <div class="col-7">
-                     
                     </div>
                 </div>
             </div>
@@ -214,8 +135,7 @@
             </div>
 
             <footer class="footer text-center">
-                All Rights Reserved by Xtreme Admin. Designed and Developed by <a
-                    href="https://www.wrappixel.com">WrapPixel</a>.
+                Creado por Mon</a>
             </footer>
 
 
