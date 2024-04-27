@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 
 @section('content')
-
     <div class="row">
         <div class="col-md-12">
             <div class="container justify-content-center align-items-center d-flex w-100"
@@ -20,19 +19,22 @@
     <div class="row">
         <div class="col-md-12">
             <div class="card p-5">
+                <div class="row">
+                    <div class="col-md-9"></div>
+                    <div class="col-md-3 justify-content-end d-flex">
+                        <button class="btn btn-primary" style="background-color: #7978e9;border:none">Agregar producto</button>
+
+                    </div>
+                </div>
                 <table id="example" class="table table-striped">
                     <thead>
                         <tr>
                             <th>ID</th>
                             <th>Nombre</th>
                             <th>Stock</th>
-
                             <th>Precio</th>
                             <th>Marca</th>
                             <th>Acciones</th>
-
-
-
                         </tr>
                     </thead>
                     <tbody>
@@ -64,7 +66,6 @@
                                                 </svg>
                                             </button>
                                         </div>
-
                                         <div class="col-md-4">
                                             {{-- Editar --}}
                                             <a href="{{ route('productos.edit', [$producto->id]) }}"

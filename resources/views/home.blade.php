@@ -21,7 +21,7 @@
         <div class="col-md-3">
             <a href="/productos">
 
-                <div class="card p-5 justify-content-center d-flex"style="background-color: #7978e9;border-radius:30px">
+                <div class="card p-5 justify-content-center d-flex"style="background-color: #0c0832;border-radius:30px">
                     <h4 class="text-white text-center p-0 m-0">Ver productos</h4>
                 </div>
             </a>
