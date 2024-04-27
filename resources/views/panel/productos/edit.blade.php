@@ -96,6 +96,7 @@
                         </div>
                     </div>
 
+                    <a href="/productos" class="btn btn-primary" style="border:1px solid #4040b1;background:transparent;color:#4040b1">Cancelar</a>
                     <button type="submit" class="btn btn-primary" style="background-color: #4040b1;border:none">Guardar
                         Cambios</button>
                 </form>
