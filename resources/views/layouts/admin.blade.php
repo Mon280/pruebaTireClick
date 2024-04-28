@@ -40,13 +40,13 @@
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
         <header class="topbar" data-navbarbg="skin5"
-            style=" background:#4040b1;  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
+            style=" background:#ddabb4;  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin5" style=" background-color:transparent">
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i
                             class="ti-menu ti-close"></i></a>
                 </div>
-            
+
             </nav>
         </header>
 
@@ -57,11 +57,12 @@
                         <li>
                             <div class="user-profile d-flex no-block dropdown m-t-20">
                                 <div class="user-pic">
-                                    <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
-                                        viewBox="0 0 24 24" width="30px" height="30px">
+                                    <svg xmlns="http://www.w3.org/2000/svg" style="width: 30px; height:30px"
+                                        id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
                                         <path fill="white"
-                                            d="M16.585,9.616,15.21,6h2.422A5.885,5.885,0,0,1,22.36,8.4l.787,1.075A4.431,4.431,0,0,1,23.867,11H16.952A6.5,6.5,0,0,0,16.585,9.616ZM12,4a1,1,0,0,0,1-1V1a1,1,0,0,0-2,0V3A1,1,0,0,0,12,4Zm2.722,6.343L13.071,6H10.938L9.26,10.452A4.709,4.709,0,0,0,9.1,11h5.821A4.623,4.623,0,0,0,14.722,10.343ZM16.553,3.9A1,1,0,0,0,17.9,3.447l1-2a1,1,0,1,0-1.79-.894l-1,2A1,1,0,0,0,16.553,3.9ZM11.988,18.887l2.786-5.253A4.591,4.591,0,0,0,14.941,13H9a4.585,4.585,0,0,0,.2.757ZM7.4,9.729,8.8,6H6.383A5.892,5.892,0,0,0,1.721,8.309L.9,9.383A4.366,4.366,0,0,0,.141,11h6.9A6.6,6.6,0,0,1,7.4,9.729ZM16.969,13a6.573,6.573,0,0,1-.344,1.4c-.015.04-3.756,7.074-3.759,7.075a.973.973,0,0,1-1.726.008s-3.774-6.912-3.79-6.955A6.586,6.586,0,0,1,6.994,13H.121a4.3,4.3,0,0,0,1.328,2.32l7.99,7.707a3.82,3.82,0,0,0,2.55.969,3.9,3.9,0,0,0,2.6-1l7.936-7.633A4.373,4.373,0,0,0,23.89,13ZM6.105,3.447A1,1,0,0,0,7.9,2.553l-1-2a1,1,0,1,0-1.79.894Z" />
+                                            d="m18,20h2v.943c-2.123,1.9-4.926,3.057-8,3.057C5.839,24,.764,19.357.079,13.38c.346.155.675.352.982.59.822.638,1.865.99,2.938.991,1.074,0,2.119-.353,2.94-.991.399-.309.816-.538,1.269-.692.533,1.582,2.029,2.721,3.791,2.721,1.47,0,2.754-.793,3.449-1.974.317.085.551.374.551.717v3.256c0,1.105.895,2,2,2ZM12.511.011C5.911-.263.431,4.796.025,11.233c.813.237,1.576.626,2.262,1.157.955.74,2.451.765,3.402.02.73-.571,1.518-.961,2.384-1.175.357-1.843,1.979-3.235,3.927-3.235,2.209,0,4,1.791,4,4,1.105,0,2,.895,2,2v4h2v-5.002c.02-.56.459-.998,1-.998.551,0,1,.448,1,1v8h2v-8.628C24,5.879,18.999.28,12.511.011Z" />
                                     </svg>
+
                                 </div>
                                 <div class="user-content hide-menu m-l-10">
                                     <a href="#" class="" id="Userdd" role="button"
@@ -84,7 +85,7 @@
                             </div>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link  waves-effect waves-dark sidebar-link"
-                                style="background-color:#4040b1;" href="/home" aria-expanded="false"><i
+                                style="background-color:#ddabb4;" href="/home" aria-expanded="false"><i
                                     class="mdi mdi-view-dashboard" style="color:white"></i><span
                                     class="hide-menu text-white">Home</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
@@ -97,7 +98,7 @@
         </aside>
 
         <div class="page-wrapper">
-        
+
             <div class="container-fluid">
                 @if ($errors->any())
                     <div class="alert alert-danger">

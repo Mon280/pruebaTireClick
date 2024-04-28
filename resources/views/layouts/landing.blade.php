@@ -176,13 +176,24 @@ $currentPath = request()->path();
             </button>
             <div class="collapse mr-5 ml-5 mt-3 mb-3 navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
+                    <h5 class="carnas1 p-0 m-0" style="color:#8a8a8a ">Prueba TireClick</h5>
                 </ul>
-                <ul class="navbar-nav w-100 justify-content-end">
+                <ul class="navbar-nav justify-content-end">
                     <li class="nav-item {{ $currentPage == 'inicio' ? 'active' : '' }} ">
                         <a class="nav-link" href="{{ route('inicio') }}">Inicio</a>
                     </li>
-                    <li class="nav-item {{ $currentPage == 'productos-cliente' ? 'active' : '' }} ">
+                    <li class="nav-item  ml-5 {{ $currentPage == 'productos-cliente' ? 'active' : '' }} ">
                         <a class="nav-link" href="{{ route('productos-cliente') }}">Productos</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="20" class="mt-2  ml-5"
+                            height="20">
+                            <path fill="#b23d58"
+                                d="M22.713,4.077A2.993,2.993,0,0,0,20.41,3H4.242L4.2,2.649A3,3,0,0,0,1.222,0H1A1,1,0,0,0,1,2h.222a1,1,0,0,1,.993.883l1.376,11.7A5,5,0,0,0,8.557,19H19a1,1,0,0,0,0-2H8.557a3,3,0,0,1-2.82-2h11.92a5,5,0,0,0,4.921-4.113l.785-4.354A2.994,2.994,0,0,0,22.713,4.077Z" />
+                            <circle   fill="#b23d58" cx="7" cy="22" r="2" />
+                            <circle  fill="#b23d58" cx="17" cy="22" r="2" />
+                        </svg>
+
                     </li>
                 </ul>
             </div>
@@ -196,7 +207,7 @@ $currentPath = request()->path();
     {{-- inicio footer --}}
     <footer class="section footer">
         <div class="container-fluid" style="background-color:white">
-         
+
             <div class="row justify-content-center d-flex">
                 <div class="container"style="border-top:1px solid #b23d58; max-width:80%"></div>
             </div>
@@ -204,7 +215,7 @@ $currentPath = request()->path();
                 <div class="col-md-2">
                 </div>
                 <div class="col-lg justify-content-center d-flex">
-                    <a  href="{{ route('inicio') }}" class="sin-decoracion">
+                    <a href="{{ route('inicio') }}" class="sin-decoracion">
                         <p class=" enlaces carnas2" style="text-align:center">Inicio</p>
                     </a>
                 </div>

@@ -30,7 +30,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="container justify-content-center align-items-center d-flex w-100"
-                style="background-image: '{{ asset('assets/morado.jpeg') }}'); height:200px;background-repeat:no-repeat;background-size:cover;background-position: center;border-radius:30px">
+                style="background-image: url({{ asset('assets/index/donas5.jpg') }}); height:200px;background-repeat:no-repeat;background-size:cover;background-position: center;border-radius:30px">
                 <div class="row">
                     <h1 class="text-white text-center" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);">Productos</h1>
                 </div>
@@ -49,7 +49,7 @@
                     <div class="col-md-9"></div>
                     <div class="col-md-3 justify-content-end d-flex">
                         <button data-toggle="modal" data-target="#modalAgregarProducto" class="btn btn-primary"
-                            style="background-color: #4040b1;border:none">Agregar producto</button>
+                            style="background-color: #ddabb4;border:none">Agregar producto</button>
 
                     </div>
                 </div>
@@ -77,7 +77,7 @@
                                         <div class="col-md-4">
                                             {{-- Detalle --}}
                                             <button type="button" class="btn btn-primary yellow-rainbow m-1"
-                                                style="border-radius: 5px;background-color:#4040b1;border:none"
+                                                style="border-radius: 5px;background-color:#ddabb4;border:none"
                                                 data-toggle="modal" data-target="#myModal{{ $producto->id }}">
                                                 <svg xmlns="http://www.w3.org/2000/svg"
                                                     xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"

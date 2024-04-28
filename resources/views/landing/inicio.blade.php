@@ -83,7 +83,6 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 p-0 m-0">
-
                 <swiper-container class="mySwiper w-100" loop="true" navigation="true" space-between="20" autoplay="true"
                     speed="5000" style="position: relative;z-index:1">
                     <swiper-slide>
@@ -100,7 +99,6 @@
                                     <a href="/productos-cliente" class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
                                 </div>
                             </div>
-
                         </div>
                     </swiper-slide>
                     <swiper-slide>
@@ -118,7 +116,6 @@
                                         productos</a>
                                 </div>
                             </div>
-
                         </div>
                     </swiper-slide>
                     <swiper-slide>
