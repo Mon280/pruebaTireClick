@@ -70,6 +70,6 @@ Para correr mi proyecto solamente tienen que clonarlo con las siguientes especif
 - Correr los seeders: php artisan db:seed
 Adjuntaré la BD por si acaso. 
 
-Si no se corren los seeders correctamente fallará el proyecto ya que se utilizan en la vista principal para mostrar productos. Adjuntaré un video de funcionamiento para evitar cualquier duda de funcionamiento, espero les guste :D
+Si no se corren los seeders correctamente fallará el proyecto ya que se utilizan en la vista principal para mostrar productos. Adjuntaré un video de funcionamiento y cualquier duda éste es mi número 4444325572, espero les guste :D
 
 NOTA: Toda la información es falsa creada con faker para generar muchos productos, de la misma forma las imágenes son solo adorno visual ya que no se guardan imágenes en la bd
