@@ -22,6 +22,18 @@
             border-top-left-radius: 30px;
             border-top-right-radius: 30px;
         }
+
+        .mi-btn {
+            background-color: #b23d58;
+            color: white;
+            border: 1px solid white;
+            border-radius: 20px;
+        }
+
+        .mi-btn:hover {
+            background-color: #3b8fb6;
+            border: 1px solid white
+        }
     </style>
     <div class="container-fluid p-0 m-0">
         <div class="row p-0 m-0 justify-content-center d-flex align-items-center img-cover">
@@ -34,7 +46,8 @@
                 <div class="col-md-12 p-4" style="background-color: #b23d58; border-radius:20px;margin-top:-50px">
                     <form id="searchForm" class="form-inline w-100">
                         <div class="input-group w-100">
-                            <input type="text" class="form-control" placeholder="Escribe el nombre del producto" id="searchInput">
+                            <input type="text" class="form-control" placeholder="Escribe el nombre del producto"
+                                id="searchInput">
                             <div class="input-group-append" style="background-color: white">
                                 <button class="btn btn-outline-secondary" type="button" id="searchButton">Buscar</button>
                             </div>
@@ -60,23 +73,31 @@
 
                             <div class="card-body">
                                 <h5 class="card-title carnas1">{{ $producto->nombre }}</h5>
-                                <p class="card-text carnas2 p-0 m-0">{{ $producto->descripcion }}</p>
+                            
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="card-text carnas2 p-0 m-0">Precio: ${{ $producto->precio }} mxn</p>
 
-                                <p class="carnas1 p-0 m-0 pt-3">Características:</p>
-                                <ul>
-                                    @foreach ($producto->caracteristicas as $caracteristica)
-                                        <li>{{ $caracteristica->nombre_caracteristica }}:
-                                            {{ $caracteristica->descripcion_caracteristica }}</li>
-                                    @endforeach
-                                </ul>
-                                <p class="card-text pt-4 carnas2 p-0 m-0">Precio: ${{ $producto->precio }} mxn</p>
-                                <p class="card-text carnas2 p-0 m-0">Stock: {{ $producto->stock }}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <p class="card-text carnas2 p-0 m-0">Stock: {{ $producto->stock }}</p>
+
+                                    </div>
+                                </div>
+                                @if ($producto->stock > 0)
+                                <form action="{{ route('productos.show', ['slug' => $producto->slug, 'id' => $producto->id]) }}" method="GET">
+                                    <input type="hidden" name="producto_id" value="{{ $producto->id }}">
+                                    <button type="submit" class="btn btn-primary mi-btn">Ver producto</button>
+                                </form>
+                                @endif
+                                
                             </div>
                         </div>
                     </div>
                 @endforeach
             </div>
-
         </div>
     </div>
 @endsection

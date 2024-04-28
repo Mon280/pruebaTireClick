@@ -13,4 +13,8 @@ class Producto extends Model
     {
         return $this->hasMany(Caracteristica::class, 'id_producto', 'id');
     }
+    public function carritos()
+    {
+        return $this->hasMany(Carrito::class);
+    }
 }

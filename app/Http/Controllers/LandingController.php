@@ -30,6 +30,6 @@ class LandingController extends Controller
         $productos = Producto::all();
         $currentPage = 'carrito';
 
-        return view('landing.inicio')->with('productos', $productos)->with('currentPage', $currentPage);
+        return view('landing.carrito')->with('productos', $productos)->with('currentPage', $currentPage);
     }
 }

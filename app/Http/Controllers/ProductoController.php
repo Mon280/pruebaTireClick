@@ -87,12 +87,19 @@ class ProductoController extends Controller
      * @param  \App\Models\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function show($slug)
+    public function show($slug, $id = null)
     {
-        $producto = Producto::where('slug', $slug)->firstOrFail();
+        $currentPage = 'productos';
 
-        return view('productos.show', compact('producto'));
+        if ($id) {
+            $producto = Producto::findOrFail($id);
+        } else {
+            $producto = Producto::where('slug', $slug)->firstOrFail();
+        }
+
+        return view('panel.productos.show')->with('currentPage',$currentPage)->with('producto',$producto);
     }
+
 
     /**
      * Show the form for editing the specified resource.

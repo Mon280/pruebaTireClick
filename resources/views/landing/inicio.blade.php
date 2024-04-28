@@ -92,7 +92,7 @@
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <h1 class="carnas1 text-white"
-                                        style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Donuts Dyzer<br>
+                                        style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Dyzer Donuts<br>
                                         Donas
                                         Artesanales, Sabores Auténticos.</h1>
                                 </div>
@@ -127,7 +127,7 @@
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <h1 class="carnas1 text-white"
-                                        style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Donuts Dyzer<br>
+                                        style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Dyzer Donuts <br>
                                         Descubre
                                         el arte de lo dulce con nosotros.</h1>
                                 </div>
@@ -143,7 +143,7 @@
                             <div class="container">
                                 <div class="row justify-content-center">
                                     <h1 class="carnas1 text-white"
-                                        style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Donuts Dyzer<br>
+                                        style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Dyzer Donuts <br>
                                         Donas
                                         para alegrar tu día.</h1>
                                 </div>
@@ -165,7 +165,7 @@
                 </div>
                 <div class="col-md-7 p-5">
                     <h3 class="carnas1 pt-3" style="color:#b23d58">Sobre nosotros</h3>
-                    <p class="p-0 m-0 carnas2 pt-3" style="font-size: 18px">Desde 2015, en Donuts Dyzer nos dedicamos a
+                    <p class="p-0 m-0 carnas2 pt-3" style="font-size: 18px">Desde 2015, en Dyzer Donuts  nos dedicamos a
                         crear experiencias dulces y
                         memorables
                         para nuestros clientes. Con una pasión arraigada por la calidad y la creatividad, hemos estado
@@ -173,7 +173,7 @@
                         refleja en cada detalle: desde la cuidadosa selección de ingredientes de primera calidad hasta la
                         elaboración artesanal de nuestras recetas únicas.<br><br>
 
-                        En Donuts Dyzer, no solo hacemos donas; creamos momentos de felicidad y placer para todos aquellos
+                        En Dyzer Donuts, no solo hacemos donas; creamos momentos de felicidad y placer para todos aquellos
                         que nos eligen. Nuestra historia está impregnada de dedicación y amor por lo que hacemos, y nuestro
                         objetivo es seguir siendo un lugar donde cada dona cuente una historia de sabor y alegría.<br><br>
                     </p>

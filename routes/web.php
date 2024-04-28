@@ -2,10 +2,10 @@
 
 // En tu archivo routes/web.php
 
+use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,6 +35,10 @@ Route::resource('/productos', ProductoController::class);
 // Rutas landing
 Route::get('inicio', [LandingController::class, 'inicio'])->name('inicio');
 Route::get('productos-cliente', [LandingController::class, 'productosCliente'])->name('productos-cliente');
-Route::get('carrito', [LandingController::class, 'carrito'])->name('carrito');
 
-
+Route::get('productos/{slug}', 'ProductosController@show')->name('productos.show');
+// Carrito
+Route::get('carrito', [CarritoController::class, 'index'])->name('carrito.index');
+Route::post('carrito/agregar', [CarritoController::class, 'agregar'])->name('carrito.agregar');
+Route::delete('carrito/remover/{producto}', [CarritoController::class, 'remover'])->name('carrito.remover');
+Route::delete('carrito/vaciar', [CarritoController::class, 'vaciar'])->name('carrito.vaciar');
