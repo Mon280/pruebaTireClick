@@ -37,7 +37,7 @@
     </style>
     <div class="container-fluid p-0 m-0">
         <div class="row p-0 m-0 justify-content-center d-flex align-items-center img-cover">
-            <h1 class="carnas1 text-white" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); font-size: 50px;">Nuestros
+            <h1 class="carnas1  text-white text-center" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); font-size: 50px;">Nuestros
                 productos</h1>
         </div>
         <div class="page">

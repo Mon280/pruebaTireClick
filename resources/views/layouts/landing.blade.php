@@ -50,10 +50,19 @@ $currentPath = request()->path();
             visibility: visible;
         }
 
+        .page {
+            padding-left: 80px !important;
+            padding-right: 80px !important;
+        }
+
         @media only screen and (max-width: 768px) {
             .page {
-                padding-left: 30px;
-                padding-right: 30px;
+                padding-left: 30px !important;
+                padding-right: 30px !important;
+            }
+
+            .font-30 {
+                font-size: 30px !important;
             }
 
             .no-margin {
@@ -66,6 +75,10 @@ $currentPath = request()->path();
 
             .pad-20-top {
                 padding-top: 20px !important;
+            }
+
+            .margin-20-top {
+                margin-top: 20px !important;
             }
 
             .pad-20-bottom {
@@ -94,7 +107,7 @@ $currentPath = request()->path();
         }
 
         .margin {
-            margin-left: 350px;
+            margin-left: 980px;
         }
 
         .nav-item.active .nav-link {
@@ -112,6 +125,10 @@ $currentPath = request()->path();
             .margin {
                 margin-left: 0px;
                 text-align: center;
+            }
+
+            .no-margin {
+                margin: 0px !important;
             }
 
             .nav-item.active .nav-link::after {
@@ -169,32 +186,35 @@ $currentPath = request()->path();
     <header class="section page-head " style="position: relative;z-index:1000">
         <nav class="navbar navbar-expand-lg navbar-light justify-content-end d-flex"
             style="background-color:white; box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);">
-
+            <a class="navbar-brand flex-grow-1" href="index.php">
+                <img src="{{ asset('assets/index/dona-individual/dona1.png') }}" width="80" height="auto"
+                    alt="">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse mr-5 ml-5 mt-3 mb-3 navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <h5 class="carnas2 p-0 m-0" style="color:black ">Prueba TireClick</h5>
-                </ul>
-                <ul class="navbar-nav justify-content-end">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav w-100 margin">
                     <li class="nav-item {{ $currentPage ?? '' == 'inicio' ? 'active' : '' }} ">
-                        <a class="nav-link" href="{{ route('inicio') }}">Inicio</a>
+                        <a class="nav-link " href="{{ route('inicio') }}">Inicio</a>
                     </li>
-                    <li class="nav-item  ml-5 {{ $currentPage ?? '' == 'productos-cliente' ? 'active' : '' }} ">
+                    <li
+                        class="nav-item no-margin  ml-5 {{ $currentPage ?? '' == 'productos-cliente' ? 'active' : '' }} ">
                         <a class="nav-link" href="{{ route('productos-cliente') }}">Productos</a>
                     </li>
                     <li>
-                        <svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="20" class="mt-2  ml-5"
-                            height="20">
-                            <path fill="#b23d58"
-                                d="M22.713,4.077A2.993,2.993,0,0,0,20.41,3H4.242L4.2,2.649A3,3,0,0,0,1.222,0H1A1,1,0,0,0,1,2h.222a1,1,0,0,1,.993.883l1.376,11.7A5,5,0,0,0,8.557,19H19a1,1,0,0,0,0-2H8.557a3,3,0,0,1-2.82-2h11.92a5,5,0,0,0,4.921-4.113l.785-4.354A2.994,2.994,0,0,0,22.713,4.077Z" />
-                            <circle   fill="#b23d58" cx="7" cy="22" r="2" />
-                            <circle  fill="#b23d58" cx="17" cy="22" r="2" />
-                        </svg>
-
+                        <a href="{{ route('carrito.index') }}">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="Filled" viewBox="0 0 24 24" width="20"
+                                class="mt-2 no-margin ml-5" height="20">
+                                <path fill="#b23d58"
+                                    d="M22.713,4.077A2.993,2.993,0,0,0,20.41,3H4.242L4.2,2.649A3,3,0,0,0,1.222,0H1A1,1,0,0,0,1,2h.222a1,1,0,0,1,.993.883l1.376,11.7A5,5,0,0,0,8.557,19H19a1,1,0,0,0,0-2H8.557a3,3,0,0,1-2.82-2h11.92a5,5,0,0,0,4.921-4.113l.785-4.354A2.994,2.994,0,0,0,22.713,4.077Z" />
+                                <circle fill="#b23d58" cx="7" cy="22" r="2" />
+                                <circle fill="#b23d58" cx="17" cy="22" r="2" />
+                            </svg>
+                        </a>
                     </li>
+
                 </ul>
             </div>
 

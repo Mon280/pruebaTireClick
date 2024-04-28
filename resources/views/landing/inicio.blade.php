@@ -79,6 +79,18 @@
             object-position: bottom center;
             border-radius: 30px
         }
+
+        :root {
+            --swiper-navigation-sides-offset: 50px;
+            --swiper-navigation-color: white;
+            --swiper-pagination-color: #ffffff;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .img-swiper {
+                height: 400px;
+            }
+        }
     </style>
     <div class="container-fluid">
         <div class="row">
@@ -90,13 +102,14 @@
                             style="background-image: url('{{ asset('assets/index/donas5.jpg') }}')">
                             <div class="container">
                                 <div class="row justify-content-center">
-                                    <h1 class="carnas1 text-white"
+                                    <h1 class="carnas1 text-white font-30"
                                         style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Dyzer Donuts<br>
                                         Donas
                                         Artesanales, Sabores Auténticos.</h1>
                                 </div>
                                 <div class="row justify-content-center pt-4">
-                                    <a href="/productos-cliente" class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
+                                    <a href="/productos-cliente" class="carnas2 btn btn-primary mi-btn">Conoce nuestros
+                                        productos</a>
                                 </div>
                             </div>
                         </div>
@@ -104,9 +117,9 @@
                     <swiper-slide>
                         <div class="img-swiper justify-content-center align-items-center d-flex"
                             style="background-image: url('{{ asset('assets/index/donas7.jpg') }}')">
-                            <div class="container">
+                            <div class="container pl-4 pr-4">
                                 <div class="row justify-content-center">
-                                    <h1 class="carnas1 text-white"
+                                    <h1 class="carnas1 text-white font-30"
                                         style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Donuts
                                         Dyzer<br>Haz de
                                         cada día una fiesta.</h1>
@@ -123,13 +136,14 @@
                             style="background-image: url('{{ asset('assets/index/donas13.jpg') }}')">
                             <div class="container">
                                 <div class="row justify-content-center">
-                                    <h1 class="carnas1 text-white"
+                                    <h1 class="carnas1 text-white font-30"
                                         style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Dyzer Donuts <br>
                                         Descubre
                                         el arte de lo dulce con nosotros.</h1>
                                 </div>
                                 <div class="row justify-content-center pt-4">
-                                    <a href="/productos-cliente" class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
+                                    <a href="/productos-cliente" class="carnas2 btn btn-primary mi-btn">Conoce nuestros
+                                        productos</a>
                                 </div>
                             </div>
                         </div>
@@ -137,15 +151,16 @@
                     <swiper-slide>
                         <div class="img-swiper justify-content-center align-items-center d-flex"
                             style="background-image: url('{{ asset('assets/index/donas9.jpg') }}')">
-                            <div class="container">
+                            <div class="container pl-4 pr-4">
                                 <div class="row justify-content-center">
-                                    <h1 class="carnas1 text-white"
+                                    <h1 class="carnas1 text-white font-30"
                                         style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);font-size:50px">Dyzer Donuts <br>
                                         Donas
                                         para alegrar tu día.</h1>
                                 </div>
                                 <div class="row justify-content-center pt-4">
-                                    <a href="/productos-cliente" class="carnas2 btn btn-primary mi-btn">Conoce nuestros productos</a>
+                                    <a href="/productos-cliente" class="carnas2 btn btn-primary mi-btn">Conoce nuestros
+                                        productos</a>
                                 </div>
                             </div>
 
@@ -156,13 +171,13 @@
             </div>
         </div>
         <div class="page">
-            <div class="row ">
-                <div class="col-md-5 pt-5">
+            <div class="row pad-20-top">
+                <div class="col-md-5 no-padding pt-5">
                     <img src="{{ asset('assets/index/donas14.jpg') }}" class="w-100 tam-img" alt="">
                 </div>
-                <div class="col-md-7 p-5">
+                <div class="col-md-7 p-5 no-padding">
                     <h3 class="carnas1 pt-3" style="color:#b23d58">Sobre nosotros</h3>
-                    <p class="p-0 m-0 carnas2 pt-3" style="font-size: 18px">Desde 2015, en Dyzer Donuts  nos dedicamos a
+                    <p class="p-0 m-0 carnas2 pt-3" style="font-size: 18px">Desde 2015, en Dyzer Donuts nos dedicamos a
                         crear experiencias dulces y
                         memorables
                         para nuestros clientes. Con una pasión arraigada por la calidad y la creatividad, hemos estado
@@ -182,11 +197,11 @@
                 </div>
             </div>
             <div class="row pt-4 pb-4">
-                <div class="col-md-12">
+                <div class="col-md-12 no-padding">
                     <div class="row">
                         @foreach ($productos->random(3) as $producto)
                             <div class="col-md-4 col-12">
-                                <div class="card"
+                                <div class="card margin-20-top" 
                                     style="border-radius: 30px;   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
                                     <div class="row">
                                         <div class="col-md-12 justify-content-center d-flex">
@@ -197,7 +212,7 @@
                                             <img src="{{ asset($randomImage) }}" class="card-img" alt="...">
                                         </div>
                                     </div>
-        
+
                                     <div class="card-body">
                                         <h5 class="card-title">{{ $producto->nombre }}</h5>
                                         <p class="card-text">Precio: ${{ $producto->precio }} mxn</p>

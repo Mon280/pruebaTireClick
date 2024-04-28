@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Venta;
+use App\Models\ProductoDeVenta;
+
 
 class VentasController extends Controller
 {
     public function store(Request $request)
     {
-        // Validación de los datos recibidos
         $request->validate([
             'correo_cliente' => 'required|email',
             'precio_total' => 'required|numeric|min:0',
