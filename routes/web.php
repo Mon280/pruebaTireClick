@@ -9,7 +9,7 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\ProductoController;
 use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
-    return redirect()->route('login');
+    return redirect()->route('inicio');
 });
 
 // Ruta de inicio

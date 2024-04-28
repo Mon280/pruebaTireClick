@@ -98,7 +98,7 @@ $currentPath = request()->path();
         }
 
         .nav-item.active .nav-link {
-            font-family: "carnas1";
+            font-family: "carnas2";
             position: relative;
         }
 
@@ -176,7 +176,7 @@ $currentPath = request()->path();
             </button>
             <div class="collapse mr-5 ml-5 mt-3 mb-3 navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <h5 class="carnas1 p-0 m-0" style="color:#8a8a8a ">Prueba TireClick</h5>
+                    <h5 class="carnas2 p-0 m-0" style="color:black ">Prueba TireClick</h5>
                 </ul>
                 <ul class="navbar-nav justify-content-end">
                     <li class="nav-item {{ $currentPage ?? '' == 'inicio' ? 'active' : '' }} ">
