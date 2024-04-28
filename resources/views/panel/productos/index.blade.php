@@ -203,13 +203,18 @@
                             </div>
                             <div class="col-md-6">
                                 <div id="caracteristicasContainer" class="mt-3">
-                                    <button id="agregarCaracteristicaBtn" class="btn btn-primary">Agregar
+                                    <button id="agregarCaracteristicaBtn" style="background-color: #b48322;border:none" class="btn btn-primary">Agregar
                                         Característica</button>
 
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Agregar</button>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <button type="submit"  style="background-color: #ddabb4;border:none" class="btn btn-primary">Agregar</button>
+
+                                </div>
+                            </div>
                     </form>
                 </div>
             </div>

@@ -68,6 +68,10 @@ Para correr mi proyecto solamente tienen que clonarlo con las siguientes especif
 - Crear base de datos en MySQL, la mia se llama pruebaTireClick
 - Correr las migraciones con: php artisan migrate:fresh
 - Correr los seeders: php artisan db:seed
+- Claves para acceder al panel administrativo:
+    correo: superusuario@correo.com
+    contraseña: password
+    
 Adjuntaré la BD por si acaso. 
 
 Si no se corren los seeders correctamente fallará el proyecto ya que se utilizan en la vista principal para mostrar productos. Adjuntaré un video de funcionamiento y cualquier duda éste es mi número 4444325572, espero les guste :D

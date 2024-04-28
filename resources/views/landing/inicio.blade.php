@@ -200,7 +200,7 @@
                 <div class="col-md-12 no-padding">
                     <div class="row">
                         @foreach ($productos->random(3) as $producto)
-                            <div class="col-md-4 col-12">
+                            <div class="col-md-4 col-12 h-100">
                                 <div class="card margin-20-top" 
                                     style="border-radius: 30px;   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
                                     <div class="row">

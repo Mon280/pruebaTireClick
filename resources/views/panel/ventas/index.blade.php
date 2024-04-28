@@ -56,7 +56,7 @@
                                 <td>{{ $venta->correo_cliente }}</td>
                                 <td>${{ $venta->precio_total }}</td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    <button type="button" class="btn btn-primary"    style="background-color: #ddabb4;border:none" data-toggle="modal"
                                         data-target="#myModal{{ $venta->id }}">
                                         Ver detalles
                                     </button>

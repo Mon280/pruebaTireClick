@@ -30,7 +30,7 @@
     </div>
     <div class="container">
         <div class="card">
-            <div class="card-header" style="background-color: #4040b1">
+            <div class="card-header" style="background-color: #ddabb4">
                 <h2 class="text-white p-0 m-0">Editar producto #{{ $producto->id }}</h2>
 
             </div>
@@ -90,14 +90,14 @@
                         <div class="col-md-6">
                             <div id="caracteristicasContainer" class="mt-3">
                                 <button id="agregarCaracteristicaBtn" class="btn btn-primary"
-                                    style="background-color: #0c0832;border:none">Agregar característica</button>
+                                    style="background-color: #b48322;border:none">Agregar característica</button>
 
                             </div>
                         </div>
                     </div>
 
-                    <a href="/productos" class="btn btn-primary" style="border:1px solid #4040b1;background:transparent;color:#4040b1">Cancelar</a>
-                    <button type="submit" class="btn btn-primary" style="background-color: #4040b1;border:none">Guardar
+                    <a href="/productos" class="btn btn-primary" style="border:1px solid #ddabb4;background:transparent;color:#ddabb4">Cancelar</a>
+                    <button type="submit" class="btn btn-primary" style="background-color: #ddabb4;border:none">Guardar
                         Cambios</button>
                 </form>
             </div>
