@@ -16,15 +16,21 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
+        $currentPage = 'login';
+
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
             return redirect()->intended('/home');
         } else {
-            return redirect()->route('login')->with('error', 'Credenciales inválidas');
+            return redirect()->route('login')->with('error', 'Credenciales inválidas')->with('currentPage',$currentPage);
         }
     }
-
+    public function showLoginForm()
+    {
+        $currentPage = 'login';
+        return view('auth.login', compact('currentPage'));
+    }
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
