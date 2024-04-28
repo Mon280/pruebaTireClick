@@ -7,7 +7,7 @@
             border-radius: 10px !important
         }
     </style>
-     <div class="container-fluid p-0 m-0 pb-4">
+    <div class="container-fluid p-0 m-0 pb-4">
         <div class="page-breadcrumb">
             <div class="row align-items-center">
                 <div class="col-5">
@@ -18,7 +18,7 @@
                                 <li class="breadcrumb-item"><a href="/home">Dashboard</a></li>
                                 <li class="breadcrumb-item"><a>Productos</a></li>
                             </ol>
-                            
+
                         </nav>
                     </div>
                 </div>

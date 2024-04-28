@@ -7,7 +7,9 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\VentasController;
 use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return redirect()->route('inicio');
 });
@@ -32,6 +34,9 @@ Route::get('carrito', [CarritoController::class, 'index'])->name('carrito.index'
 Route::post('carrito/agregar', [CarritoController::class, 'agregar'])->name('carrito.agregar');
 Route::delete('carrito/remover/{producto}', [CarritoController::class, 'remover'])->name('carrito.remover');
 Route::delete('carrito/vaciar', [CarritoController::class, 'vaciar'])->name('carrito.vaciar');
+
+// Ventas
+Route::post('ventas', [VentasController::class, 'store'])->name('ventas.store');
 
 // Ruta para el login
 Route::get('login', function () {
