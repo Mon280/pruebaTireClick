@@ -244,7 +244,11 @@ $currentPath = request()->path();
                         <p class="enlaces carnas2" style="text-align:center">Productos</p>
                     </a>
                 </div>
-
+                <div class="col-lg justify-content-center d-flex">
+                    <a href="{{ route('login') }}" class="sin-decoracion">
+                        <p class="enlaces carnas2" style="text-align:center">Iniciar Sesión</p>
+                    </a>
+                </div>
                 <div class="col-md-2">
                 </div>
             </div>

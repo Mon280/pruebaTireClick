@@ -39,12 +39,17 @@
     <div class="row">
         <div class="col-md-3">
             <a href="/productos">
-
-                <div class="card p-5 justify-content-center d-flex"style="background-color: #b23d58;border-radius:30px">
+                <div class="card p-5 justify-content-center d-flex"style="background-color: #b48322;border-radius:30px">
                     <h4 class="text-white text-center p-0 m-0">Ver productos</h4>
                 </div>
             </a>
-
+        </div>
+        <div class="col-md-3">
+            <a href="/productos">
+                <div class="card p-5 justify-content-center d-flex"style="background-color: #b48322;border-radius:30px">
+                    <h4 class="text-white text-center p-0 m-0">Ver ventas</h4>
+                </div>
+            </a>
         </div>
     </div>
 @endsection

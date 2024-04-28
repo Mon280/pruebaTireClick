@@ -92,6 +92,10 @@
                                 href="/productos" aria-expanded="false"><i class="mdi mdi-border-all"
                                     style="color:white"></i><span class="hide-menu text-white">Productos</span></a>
                         </li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                            href="{{ route('ventas-panel.index') }}" aria-expanded="false"><i class="mdi mdi-border-all"
+                                style="color:white"></i><span class="hide-menu text-white">Ventas</span></a>
+                    </li>
                     </ul>
                 </nav>
             </div>

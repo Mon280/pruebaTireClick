@@ -37,6 +37,7 @@ Route::delete('carrito/vaciar', [CarritoController::class, 'vaciar'])->name('car
 
 // Ventas
 Route::post('ventas', [VentasController::class, 'store'])->name('ventas.store');
+Route::get('ventas-panel', [VentasController::class, 'index'])->name('ventas-panel.index');
 
 // Ruta para el login
 Route::get('login', function () {

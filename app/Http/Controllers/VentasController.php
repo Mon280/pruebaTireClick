@@ -11,6 +11,16 @@ use App\Models\ProductoDeVenta;
 
 class VentasController extends Controller
 {
+    public function index()
+    {
+        $ventas = Venta::orderBy('created_at', 'desc')->get();
+    
+        $productosDeVenta = ProductoDeVenta::all();
+        return view('panel.ventas.index')->with('ventas', $ventas)->with('productosDeVenta', $productosDeVenta);
+    }
+    
+    
+    
     public function store(Request $request)
     {
         $request->validate([
