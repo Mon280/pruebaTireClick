@@ -45,7 +45,7 @@
             </a>
         </div>
         <div class="col-md-3">
-            <a href="/productos">
+            <a  href="{{ route('ventas-panel.index') }}">
                 <div class="card p-5 justify-content-center d-flex"style="background-color: #b48322;border-radius:30px">
                     <h4 class="text-white text-center p-0 m-0">Ver ventas</h4>
                 </div>
